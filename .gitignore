@@ -15,6 +15,7 @@
 
 # production
 /build
+/BrandKit
 
 # misc
 .DS_Store
