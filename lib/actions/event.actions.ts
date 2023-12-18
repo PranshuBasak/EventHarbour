@@ -78,7 +78,7 @@ export async function updateEvent({ userId, event, path }: UpdateEventParams) {
       { new: true }
     )
     revalidatePath(path)
-
+    
     return JSON.parse(JSON.stringify(updatedEvent))
   } catch (error) {
     handleError(error)
@@ -122,6 +122,7 @@ export async function getAllEvents({ query, limit = 6, page, category }: GetAllE
       totalPages: Math.ceil(eventsCount / limit),
     }
   } catch (error) {
+    console.log(error)
     handleError(error)
   }
 }

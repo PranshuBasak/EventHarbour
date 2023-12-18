@@ -1,5 +1,5 @@
 // import CategoryFilter from '@/components/shared/CategoryFilter';
-// import Collection from '@/components/shared/Collection'
+import Collection from '@/components/shared/Collection'
 // import Search from '@/components/shared/Search';
 import { Button } from '@/components/ui/button'
 import { getAllEvents } from '@/lib/actions/event.actions';
@@ -46,12 +46,12 @@ export default async function Home({ searchParams }: SearchParamProps) {
       </section> 
 
       <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-        <h2 className="h2-bold">Trust by <br /> Thousands of Events</h2>
+        <h2 className="h2-bold">Trust by <br /> Thousands of Sailors</h2>
 
         {/* <div className="flex w-full flex-col gap-5 md:flex-row">
           <Search />
           <CategoryFilter />
-        </div>
+        </div> */}
 
         <Collection 
           data={events?.data}
@@ -61,7 +61,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
           limit={6}
           page={page}
           totalPages={events?.totalPages}
-        /> */}
+        />
       </section>
     </>
   )
